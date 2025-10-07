@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Backend (senza backend)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hello Backend <span>(senza backend)</span></h1>
+      <button id="dark-mode-toggle" type="button">🌙 Dark/Light</button>
+    </header>
+
+    <main>
+      <!-- Sezione 1: Ora locale + Meteo -->
+      <section class="card">
+        <h2>1) Città → Ora locale + Meteo</h2>
+        <div class="row">
+          <label for="city">Seleziona città:</label>
+          <select id="city" multiple size="5">
+            <option value="rome">Roma</option>
+            <option value="london">Londra</option>
+            <option value="newyork">New York</option>
+            <option value="paris">Parigi</option>
+            <option value="tokyo">Tokyo</option>
+          </select>
+          <button id="btn-refresh" type="button">Aggiorna</button>
+        </div>
+        <div class="grid-2">
+          <div>
+            <h3>Ora locale (WorldTimeAPI)</h3>
+            <div id="time-container"></div>
+            <ul id="history-time"></ul>
+          </div>
+          <div>
+            <h3>Meteo attuale (Open-Meteo)</h3>
+            <div id="weather-container"></div>
+            <ul id="history-weather"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sezione 2: Echo Playground -->
+      <section class="card">
+        <h2>2) Echo Playground</h2>
+        <form id="echo-form" class="row">
+          <input
+            id="echo-input"
+            type="text"
+            placeholder="Scrivi un testo…"
+            required
+          />
+          <button type="submit">Invia</button>
+        </form>
+        <pre id="echo-out" class="output muted">La risposta apparirà qui.</pre>
+        <ul id="history-echo"></ul>
+      </section>
+
+      <!-- Sezione 3: Post finti -->
+      <section class="card">
+        <h2>3) Post finti (JSONPlaceholder)</h2>
+        <form id="post-form" class="row">
+          <input id="post-title" type="text" placeholder="Titolo" required />
+          <input id="post-body" type="text" placeholder="Contenuto" required />
+          <button type="submit">Crea post</button>
+        </form>
+        <div class="row">
+          <button id="btn-load-posts" type="button">
+            Carica lista post (userId=1)
+          </button>
+        </div>
+        <div id="posts-list"></div>
+      </section>
+    </main>
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
