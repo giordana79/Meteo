@@ -61,4 +61,4 @@ Per garantire maggiore sicurezza si può aggiungere l'autenticazione o delle lim
 Il POST verrebbe inviato al backend questo salverebbe i post in un database come per es PostgreSQL, MySQL. I metodi GET e POST diventerebbero persistenti,
 i dati rimarrebbero anche dopo il refresh della pagina ed infine vi è la possibilità di fare autenticazione e gestione utenti (es. userId reale).
 
-Il progetto è stato testato su vari browser (Safari, Chromiun, Chrom, Firefox)ma l'unico in cui è risultato funzionante al 100% è Firefox.
+Il progetto è stato testato su vari browser (Safari, Chromiun, Chrome, Firefox)ma l'unico in cui è risultato funzionante al 100% è Firefox.
